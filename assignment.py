@@ -1,5 +1,9 @@
 import json
 
+script_dir = os.path.dirname(os.path.abspath(__file__))
+json_file_path = os.path.join(script_dir, 'hotel_data.json')
+with open(json_file_path, 'r') as f:
+    hotel_data = json.load(f)
 
 
 def find_cheapest_price(hotel_data):
